@@ -40,7 +40,19 @@ module.exports = {
       ],
     },
   ],
-  
+
+  export default {
+  testEnvironment: 'node',
+  coverageDirectory: 'coverage',
+  collectCoverageFrom: ['src/**/*.js'],
+};
+
+  export default {
+  testEnvironment: 'jsdom',
+  setupFilesAfterEnv: ['<rootDir>/src/setupTests.js'],
+  collectCoverageFrom: ['src/**/*.{js,jsx}'],
+};
+
   // Global configuration
   verbose: true,
   collectCoverage: true,
